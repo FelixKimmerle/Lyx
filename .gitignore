@@ -1,6 +1,5 @@
 .vs/
 .vscode/
 build/
-test.lyx
 *.filters
 *.user
