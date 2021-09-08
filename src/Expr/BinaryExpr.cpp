@@ -1,10 +1,10 @@
 #include "BinaryExpr.hpp"
 #include "VisitorExpr.hpp"
-
+#include <iostream>
 BinaryExpr::BinaryExpr(ExprPtr left, ExprPtr right, BinaryExpr::BinaryOperator binary_operator, SourceSector position) : Expr(position),
-                                                                                                                          left(std::move(left)),
-                                                                                                                          right(std::move(right)),
-                                                                                                                          binary_operator(binary_operator)
+                                                                                                                         left(std::move(left)),
+                                                                                                                         right(std::move(right)),
+                                                                                                                         binary_operator(binary_operator)
 
 {
 }

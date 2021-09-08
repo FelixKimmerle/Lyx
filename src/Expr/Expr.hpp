@@ -11,6 +11,7 @@ protected:
 
 public:
     Expr(SourceSector sector);
+    virtual ~Expr();
     virtual void visit(VisitorExpr *p_pVisitor) = 0;
     virtual SourceSector get_sector();
 };

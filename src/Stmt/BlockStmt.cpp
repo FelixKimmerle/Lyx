@@ -1,5 +1,8 @@
 #include "Stmt/BlockStmt.hpp"
 #include "Stmt/VisitorStmt.hpp"
+
+#include <iostream>
+
 BlockStmt::BlockStmt(SourceSector position) : Stmt(position)
 {
 }
@@ -9,11 +12,11 @@ void BlockStmt::visit(VisitorStmt *visitor)
     visitor->visitBlock(this);
 }
 
-std::vector<StmtPtr>::const_iterator BlockStmt::begin()const
+std::vector<StmtPtr>::const_iterator BlockStmt::begin() const
 {
     return stmts.cbegin();
 }
-std::vector<StmtPtr>::const_iterator BlockStmt::end()const
+std::vector<StmtPtr>::const_iterator BlockStmt::end() const
 {
     return stmts.cend();
 }

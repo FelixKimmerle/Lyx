@@ -12,6 +12,7 @@ protected:
 
 public:
     Stmt(SourceSector sector);
+    virtual ~Stmt();
     virtual void visit(VisitorStmt *visitor) = 0;
     virtual SourceSector get_sector();
 };
