@@ -7,10 +7,17 @@ class BinaryExpr : public Expr
 public:
     enum BinaryOperator
     {
-        BO_ADD,
-        BO_SUB,
-        BO_MUL,
-        BO_DIV,
+        ADD,
+        SUB,
+        MUL,
+        DIV,
+        AND,
+        OR,
+        EQUAL,
+        LESS,
+        LESS_EQUAL,
+        GREATER,
+        GREATER_EQUAL,
     };
 
 private:
@@ -24,4 +31,6 @@ public:
     Expr *get_left();
     Expr *get_right();
     BinaryOperator get_binary_operator();
+    virtual void print_tree(std::ostream &os, int indent = 0) const override;
+    virtual void print_source(std::ostream &os) const override;
 };

@@ -18,4 +18,7 @@ public:
     Expr *get_initializer()const;
     Datatype *get_type()const;
     std::string get_name()const;
+
+    virtual void print_tree(std::ostream &os, int indent = 0) const override;
+    virtual void print_source(std::ostream &os, int indent = 0) const override;
 };

@@ -16,4 +16,7 @@ public:
 	Expr *get_condition();
 	Stmt *get_then();
 	Stmt *get_else();
+
+	virtual void print_tree(std::ostream &os, int indent = 0) const override;
+	virtual void print_source(std::ostream &os, int indent = 0) const override;
 };

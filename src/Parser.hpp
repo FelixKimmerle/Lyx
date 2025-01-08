@@ -36,7 +36,7 @@ private:
     std::unique_ptr<Expr> finish_call(std::unique_ptr<Expr> callee);
     std::unique_ptr<Expr> literal();
 
-    std::unique_ptr<BlockStmt> block();
+    std::unique_ptr<BlockStmt> block(bool constructed = true);
     std::unique_ptr<Stmt> declaration();
     std::unique_ptr<Stmt> var_declaration(DatatypePtr type, Token name);
     std::unique_ptr<Stmt> statement();
@@ -59,6 +59,6 @@ private:
 public:
     Parser(const std::string &file_name, const std::string &src);
     Parser(const std::string &file_name);
-    std::unique_ptr<BlockStmt> parse();
+    StmtPtr parse();
     bool had_error();
 };

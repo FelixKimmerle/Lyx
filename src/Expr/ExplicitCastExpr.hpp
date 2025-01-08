@@ -14,4 +14,6 @@ public:
     void visit(VisitorExpr *visitor);
     Expr *get_expr();
     Datatype *get_type();
+    virtual void print_tree(std::ostream &os, int indent = 0) const override;
+    virtual void print_source(std::ostream &os) const override;
 };

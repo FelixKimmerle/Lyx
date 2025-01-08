@@ -73,8 +73,8 @@ public:
     };
 
 private:
-    std::string lexeme;
     TokenType type;
+    std::string lexeme;
     SourceSector sector;
     friend std::ostream &operator<<(std::ostream &out, const Token &value);
 

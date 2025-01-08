@@ -20,6 +20,19 @@ T NumberExpr<T>::get_number()
     return number;
 }
 
+template <class T>
+void NumberExpr<T>::print_tree(std::ostream &os, int indent) const
+{
+    indent_str(os, indent);
+    os << "Number: " << number << "\n";
+}
+
+template <class T>
+void NumberExpr<T>::print_source(std::ostream &os) const
+{
+    os << number;
+}
+
 //template class NumberExpr<uint8_t>;
 //template class NumberExpr<uint16_t>;
 //template class NumberExpr<uint32_t>;

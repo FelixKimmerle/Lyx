@@ -7,8 +7,8 @@ class UnaryExpr : public Expr
 public:
     enum UnaryOperator
     {
-        UO_MINUS,
-        UO_BANG,
+        MINUS,
+        BANG,
     };
 
 private:
@@ -20,4 +20,7 @@ public:
     void visit(VisitorExpr *visitor);
     Expr *get_expr();
     UnaryOperator get_unary_operator();
+
+    virtual void print_tree(std::ostream &os, int indent = 0) const override;
+    virtual void print_source(std::ostream &os) const override;
 };

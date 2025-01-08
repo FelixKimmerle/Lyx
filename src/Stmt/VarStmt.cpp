@@ -27,3 +27,21 @@ std::string VarStmt::get_name()const
 {
     return name;
 }
+
+void VarStmt::print_tree(std::ostream &os, int indent) const
+{
+    indent_str(os, indent);
+    os << "VarStmt: \n";
+    indent_str(os, indent + 1);
+    os << name << "\n";
+    // indent_str(os, indent + 1);
+    initializer->print_tree(os, indent + 1);
+}
+
+void VarStmt::print_source(std::ostream &os, int indent) const
+{
+    indent_str(os, indent);
+    os << name << " = ";
+    initializer->print_source(os);
+    os << "; ";
+}

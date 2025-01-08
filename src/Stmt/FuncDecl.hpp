@@ -9,10 +9,10 @@
 class FuncDecl : public Stmt
 {
 private:
-    std::vector<std::pair<DatatypePtr, std::string>> args;
-    std::unique_ptr<BlockStmt> body;
     std::string name;
     DatatypePtr return_type;
+    std::unique_ptr<BlockStmt> body;
+    std::vector<std::pair<DatatypePtr, std::string>> args;
 
 public:
     FuncDecl(std::string name, DatatypePtr return_type, std::unique_ptr<BlockStmt> body, SourceSector sector);
@@ -24,4 +24,7 @@ public:
     std::vector<std::pair<DatatypePtr, std::string>>::iterator end();
     unsigned int get_arity() const;
     void add_arg(std::string name, DatatypePtr datatype);
+
+    virtual void print_tree(std::ostream &os, int indent = 0) const override;
+	virtual void print_source(std::ostream &os, int indent = 0) const override;
 };

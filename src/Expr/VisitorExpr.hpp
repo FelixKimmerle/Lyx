@@ -7,9 +7,6 @@
 #include "ExplicitCastExpr.hpp"
 #include "VarExpr.hpp"
 #include "AssignExpr.hpp"
-#include "OrExpr.hpp"
-#include "AndExpr.hpp"
-#include "ComparisonExpr.hpp"
 #include "CallExpr.hpp"
 
 class VisitorExpr
@@ -25,9 +22,6 @@ public:
     virtual void visitExplicitCast(ExplicitCastExpr *p_pExpr) = 0;
     virtual void visitVar(VarExpr *p_pExpr) = 0;
     virtual void visitAssign(AssignExpr *p_pExpr) = 0;
-    virtual void visitOr(OrExpr *p_pExpr) = 0;
-    virtual void visitAnd(AndExpr *p_pExpr) = 0;
-    virtual void visitComparison(ComparisonExpr *p_pExpr) = 0;
     virtual void visitCall(CallExpr *p_pExpr) = 0;
 };
 

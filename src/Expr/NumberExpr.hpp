@@ -11,4 +11,6 @@ public:
     NumberExpr(T number, SourceSector position);
     void visit(VisitorExpr *visitor);
     T get_number();
+    virtual void print_tree(std::ostream &os,int indent = 0) const override;   
+    virtual void print_source(std::ostream &os) const override;
 };

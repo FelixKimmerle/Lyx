@@ -1,1 +1,4 @@
-print 5;
+while(true)
+{
+    print 123 * (2 + 3);
+}

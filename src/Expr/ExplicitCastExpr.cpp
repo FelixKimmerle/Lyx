@@ -19,3 +19,18 @@ Datatype *ExplicitCastExpr::get_type()
 {
     return type.get();
 }
+
+void ExplicitCastExpr::print_tree(std::ostream &os, int indent) const
+{
+    indent_str(os, indent);
+    os << "cast (" << "TODO!!!" << ")\n";
+
+    expr->print_tree(os, indent + 1);
+}
+
+void ExplicitCastExpr::print_source(std::ostream &os) const
+{
+    os << "TODO!!! datatype(";
+    expr->print_source(os);
+    os << ")";
+}
